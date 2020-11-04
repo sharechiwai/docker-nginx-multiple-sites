@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  container-tracking-db:
+    image: postgres:11
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: my-postgres-db
+      POSTGRES_USER: postgresuser
+      POSTGRES_PASSWORD: Passw0rd
+    ports:
+      - 5432:5432

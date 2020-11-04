@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  mongo:
+    image: mongo:4.2
+    networks:
+      - overlay
+    volumes:
+      - type: volume
+        source: dbdata
+        target: /usr/local/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "root"
+      MONGO_INITDB_ROOT_PASSWORD: "Passw0rd"
