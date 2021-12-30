@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+    vsftpd:
+      image: fauria/vsftpd
+      environment:
+        - FTP_USER=myuser
+        - FTP_PASS=mYp4sS
+      ports:
+        - 0.0.0.0:20:20
+        - 0.0.0.0:21:21
